@@ -11,6 +11,7 @@ import Sell from "./pages/Sell";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import Certification from "./pages/Certification";
 import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
