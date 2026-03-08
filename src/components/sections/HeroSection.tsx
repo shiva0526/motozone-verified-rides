@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroBike from '@/assets/hero-bike.png';
+import { useRef } from 'react';
 
 const stats = [
   { value: '500+', label: 'Bikes Sold' },
@@ -11,8 +12,19 @@ const stats = [
 ];
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+
+  const bikeX = useTransform(scrollYProgress, [0, 1], [0, -120]);
+  const bikeY = useTransform(scrollYProgress, [0, 1], [0, 60]);
+  const bikeRotate = useTransform(scrollYProgress, [0, 1], [0, -8]);
+  const bikeScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.05, 0.9]);
+
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grain-overlay">
+    <section ref={sectionRef} className="relative min-h-screen flex flex-col justify-center overflow-hidden grain-overlay">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/20" />
       
@@ -27,6 +39,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: -40, scale: 0.95 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
+              style={{ x: bikeX, y: bikeY, rotate: bikeRotate, scale: bikeScale }}
               className="relative"
             >
               {/* Glow behind bike */}
@@ -34,7 +47,7 @@ const HeroSection = () => {
               <img
                 src={heroBike}
                 alt="Premium motorcycle"
-                className="relative w-full max-w-[600px] h-auto drop-shadow-[0_20px_60px_rgba(232,160,32,0.2)] animate-float"
+                className="relative w-full max-w-[600px] h-auto drop-shadow-[0_20px_60px_rgba(232,160,32,0.2)]"
               />
             </motion.div>
           </div>
