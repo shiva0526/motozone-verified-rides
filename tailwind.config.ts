@@ -85,14 +85,14 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(200, 30, 30, 0.1)" },
-          "50%": { boxShadow: "0 0 40px rgba(200, 30, 30, 0.25)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(227, 24, 55, 0.1)" },
+          "50%": { boxShadow: "0 0 50px rgba(227, 24, 55, 0.3)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "fade-in-up": "fade-in-up 0.4s ease-out forwards",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
       },
     },

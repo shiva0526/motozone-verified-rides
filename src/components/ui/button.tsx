@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-full",
-        outline: "border border-input bg-transparent hover:bg-muted hover:text-foreground rounded-full",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full",
-        ghost: "hover:bg-muted hover:text-foreground rounded-full",
+        default: "bg-primary text-primary-foreground hover:bg-primary/85 rounded-sm",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-sm",
+        outline: "border border-input bg-transparent hover:bg-muted hover:text-foreground rounded-sm",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-sm",
+        ghost: "hover:bg-muted hover:text-foreground rounded-sm",
         link: "text-accent underline-offset-4 hover:underline",
-        amber: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-bold shadow-[0_0_20px_rgba(200,30,30,0.2)] hover:shadow-[0_0_30px_rgba(200,30,30,0.35)]",
-        "ghost-light": "border border-foreground/20 text-foreground hover:bg-foreground/10 rounded-full",
+        amber: "bg-gradient-to-r from-primary to-primary/70 text-primary-foreground hover:from-primary/90 hover:to-primary/60 rounded-sm font-bold shadow-[0_0_20px_rgba(227,24,55,0.25)] hover:shadow-[0_0_35px_rgba(227,24,55,0.45)]",
+        "ghost-light": "border border-foreground/20 text-foreground hover:bg-foreground/10 hover:border-foreground/40 rounded-sm",
       },
       size: {
         default: "h-10 px-5 py-2",
