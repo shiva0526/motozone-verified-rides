@@ -36,7 +36,7 @@ const HeroSection = () => {
             </p>
 
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Find Your <span className="text-gradient-amber">Perfect</span>
+              Find Your <span className="text-gradient-brand">Perfect</span>
               <br />
               Ride.
             </h1>
