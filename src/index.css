@@ -6,57 +6,58 @@
 
 @layer base {
   :root {
-    --background: 220 45% 7%;
-    --foreground: 210 33% 96%;
+    --background: 0 0% 6%;
+    --foreground: 0 0% 96%;
 
-    --card: 220 30% 10%;
-    --card-foreground: 210 33% 96%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 220 30% 10%;
-    --popover-foreground: 210 33% 96%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 210 55% 24%;
-    --primary-foreground: 210 33% 96%;
+    --primary: 0 75% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 30% 14%;
-    --secondary-foreground: 210 33% 96%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 220 20% 16%;
-    --muted-foreground: 213 18% 55%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 39 80% 52%;
-    --accent-foreground: 220 45% 7%;
+    --accent: 50 95% 52%;
+    --accent-foreground: 0 0% 6%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 210 33% 96%;
+    --destructive-foreground: 0 0% 100%;
 
     --success: 142 71% 45%;
-    --success-foreground: 220 45% 7%;
+    --success-foreground: 0 0% 6%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 39 80% 52%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 75% 45%;
 
     --radius: 1rem;
 
     --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.08);
     --glass-blur: 12px;
 
-    --amber-glow: 0 0 40px rgba(232, 160, 32, 0.15);
-    --amber-glow-strong: 0 0 60px rgba(232, 160, 32, 0.25);
+    --glow-primary: 0 0 40px rgba(200, 30, 30, 0.2);
+    --glow-accent: 0 0 40px rgba(240, 200, 20, 0.15);
+    --glow-strong: 0 0 60px rgba(200, 30, 30, 0.3);
 
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    --sidebar-background: 220 30% 10%;
-    --sidebar-foreground: 210 33% 96%;
-    --sidebar-primary: 39 80% 52%;
-    --sidebar-primary-foreground: 220 45% 7%;
-    --sidebar-accent: 220 20% 16%;
-    --sidebar-accent-foreground: 210 33% 96%;
-    --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 39 80% 52%;
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 0 75% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 0 75% 45%;
   }
 }
 
@@ -83,12 +84,16 @@
     border: 1px solid var(--glass-border);
   }
 
-  .amber-glow {
-    box-shadow: var(--amber-glow);
+  .glow-primary {
+    box-shadow: var(--glow-primary);
   }
 
-  .amber-glow-strong {
-    box-shadow: var(--amber-glow-strong);
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .glow-strong {
+    box-shadow: var(--glow-strong);
   }
 
   .grain-overlay {
@@ -103,6 +108,10 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 1;
+  }
+
+  .text-gradient-brand {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
   }
 
   .text-gradient-amber {
