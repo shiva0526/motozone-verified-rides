@@ -12,8 +12,8 @@ const stats = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grain-overlay">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/20" />
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/15" />
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
 
       <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
         <div className="grid lg:grid-cols-5 gap-8 items-center min-h-[70vh]">
