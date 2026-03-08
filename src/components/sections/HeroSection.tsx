@@ -1,9 +1,7 @@
-import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
-const BikeCanvas = lazy(() => import('@/components/3d/BikeCanvas'));
+import heroBike from '@/assets/hero-bike.png';
 
 const stats = [
   { value: '500+', label: 'Bikes Sold' },
@@ -17,20 +15,28 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grain-overlay">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/20" />
+      
+      {/* Ambient glow */}
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px]" />
 
       <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
         <div className="grid lg:grid-cols-5 gap-8 items-center min-h-[70vh]">
-          {/* 3D Canvas - Left */}
-          <div className="lg:col-span-3 h-[400px] lg:h-[550px] order-2 lg:order-1">
-            <Suspense
-              fallback={
-                <div className="flex items-center justify-center h-full">
-                  <div className="w-10 h-10 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-                </div>
-              }
+          {/* Bike Image - Left */}
+          <div className="lg:col-span-3 flex items-center justify-center order-2 lg:order-1">
+            <motion.div
+              initial={{ opacity: 0, x: -40, scale: 0.95 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              className="relative"
             >
-              <BikeCanvas />
-            </Suspense>
+              {/* Glow behind bike */}
+              <div className="absolute inset-0 bg-accent/10 rounded-full blur-[80px] scale-75" />
+              <img
+                src={heroBike}
+                alt="Premium motorcycle"
+                className="relative w-full max-w-[600px] h-auto drop-shadow-[0_20px_60px_rgba(232,160,32,0.2)] animate-float"
+              />
+            </motion.div>
           </div>
 
           {/* Text Content - Right */}
@@ -90,10 +96,7 @@ const HeroSection = () => {
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4"
         >
           {stats.map((stat, i) => (
-            <div
-              key={i}
-              className="glass-card rounded-2xl p-5 text-center"
-            >
+            <div key={i} className="glass-card rounded-2xl p-5 text-center">
               <p className="font-heading text-2xl md:text-3xl font-bold text-accent">
                 {stat.value}
               </p>
