@@ -1,8 +1,6 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroBike from '@/assets/hero-bike.png';
-import { useRef } from 'react';
 
 const stats = [
   { value: '500+', label: 'Bikes Sold' },
