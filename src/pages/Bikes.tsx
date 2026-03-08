@@ -106,7 +106,7 @@ const Bikes = () => {
           <div className="flex gap-8">
             {/* Sidebar Filters */}
             <aside className={`${showFilters ? 'block' : 'hidden'} lg:block w-full lg:w-64 flex-shrink-0`}>
-              <div className="glass-card rounded-2xl p-5 space-y-5 sticky top-24">
+              <div className="glass-card rounded-sm p-5 space-y-5 sticky top-24">
                 <div className="flex items-center justify-between">
                   <h3 className="font-heading font-bold text-sm">Filters</h3>
                   {hasFilters && (
