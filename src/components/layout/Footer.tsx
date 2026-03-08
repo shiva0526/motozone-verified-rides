@@ -1,7 +1,24 @@
+import { Link } from 'react-router-dom';
+import logo from '@/assets/logo.png';
+
 const footerLinks = {
-  Marketplace: ['Browse Bikes', 'Sell Your Bike', 'How It Works', 'Certification'],
-  Company: ['About Us', 'Contact', 'FAQ', 'Payment Info'],
-  Legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy'],
+  Marketplace: [
+    { label: 'Browse Bikes', href: '/bikes' },
+    { label: 'Sell Your Bike', href: '/sell' },
+    { label: 'How It Works', href: '/how-it-works' },
+    { label: 'Certification', href: '/certification' },
+  ],
+  Company: [
+    { label: 'About Us', href: '#' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'FAQ', href: '#' },
+    { label: 'Payment Info', href: '#' },
+  ],
+  Legal: [
+    { label: 'Privacy Policy', href: '#' },
+    { label: 'Terms of Service', href: '#' },
+    { label: 'Cookie Policy', href: '#' },
+  ],
 };
 
 const Footer = () => {
@@ -11,19 +28,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-                <span className="font-heading font-black text-accent-foreground text-sm">M</span>
-              </div>
-              <span className="font-heading font-bold text-xl">
-                Moto<span className="text-accent">zone</span>
-              </span>
-            </div>
-            <p className="text-muted-foreground text-sm font-body mb-4">
-              Premium Bikes. Verified Trust.
+            <Link to="/" className="inline-block mb-4">
+              <img src={logo} alt="Motozone Premium" className="h-14 w-auto" />
+            </Link>
+            <p className="text-muted-foreground text-sm font-body mb-2">
+              Multi Brand Pre-Owned Bikes
             </p>
             <p className="text-muted-foreground text-xs font-body">
-              India's trusted marketplace for pre-owned motorcycles.
+              India's trusted marketplace for premium pre-owned motorcycles.
             </p>
           </div>
 
@@ -33,13 +45,13 @@ const Footer = () => {
               <h4 className="font-heading font-semibold text-sm mb-4">{title}</h4>
               <ul className="flex flex-col gap-2.5">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.label}>
+                    <Link
+                      to={link.href}
                       className="text-muted-foreground hover:text-foreground text-sm font-body transition-colors"
                     >
-                      {link}
-                    </a>
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -49,7 +61,7 @@ const Footer = () => {
 
         <div className="border-t border-border/50 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-xs font-body">
-            © 2024 Motozone. All rights reserved.
+            © 2024 Motozone Premium. All rights reserved.
           </p>
           <p className="text-muted-foreground text-xs font-body">
             Made with ❤️ in India

@@ -12,19 +12,19 @@ const stats = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden grain-overlay">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/20" />
-      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/15" />
+      <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]" />
 
       <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
         <div className="grid lg:grid-cols-5 gap-8 items-center min-h-[70vh]">
           {/* Bike Image */}
           <div className="lg:col-span-3 flex items-center justify-center order-2 lg:order-1">
             <div className="relative">
-              <div className="absolute inset-0 bg-accent/10 rounded-full blur-[80px] scale-75" />
+              <div className="absolute inset-0 bg-primary/10 rounded-full blur-[80px] scale-75" />
               <img
                 src={heroBike}
                 alt="Premium motorcycle"
-                className="relative w-full max-w-[600px] h-auto drop-shadow-[0_20px_60px_rgba(232,160,32,0.2)]"
+                className="relative w-full max-w-[600px] h-auto drop-shadow-[0_20px_60px_rgba(200,30,30,0.2)]"
               />
             </div>
           </div>
@@ -36,7 +36,7 @@ const HeroSection = () => {
             </p>
 
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Find Your <span className="text-gradient-amber">Perfect</span>
+              Find Your <span className="text-gradient-brand">Perfect</span>
               <br />
               Ride.
             </h1>

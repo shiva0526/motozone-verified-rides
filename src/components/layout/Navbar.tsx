@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.png';
 
 const navLinks = [
   { label: 'Browse Bikes', href: '/bikes' },
@@ -20,12 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-              <span className="font-heading font-black text-accent-foreground text-sm">M</span>
-            </div>
-            <span className="font-heading font-bold text-xl tracking-tight">
-              Moto<span className="text-accent">zone</span>
-            </span>
+            <img src={logo} alt="Motozone Premium" className="h-12 w-auto" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
