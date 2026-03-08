@@ -136,7 +136,7 @@ const Bikes = () => {
                     <Link
                       key={bike.id}
                       to={`/bikes/${bike.slug}`}
-                      className="glass-card rounded-2xl overflow-hidden group cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(232,160,32,0.15)] transition-all duration-300"
+                      className="glass-card rounded-sm overflow-hidden group cursor-pointer hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(227,24,55,0.15)] transition-all duration-200"
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <img
