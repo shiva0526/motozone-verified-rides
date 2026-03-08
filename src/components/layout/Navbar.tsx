@@ -37,8 +37,12 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm">Login</Button>
-            <Button variant="amber" size="sm">Get Started</Button>
+            <Link to="/login">
+              <Button variant="ghost" size="sm">Login</Button>
+            </Link>
+            <Link to="/login">
+              <Button variant="amber" size="sm">Get Started</Button>
+            </Link>
           </div>
 
           <button
