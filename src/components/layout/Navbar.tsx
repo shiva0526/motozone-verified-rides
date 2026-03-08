@@ -29,7 +29,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-muted-foreground hover:text-foreground text-sm font-body font-medium transition-colors"
+                className="nav-link text-muted-foreground hover:text-foreground text-sm font-body font-medium"
               >
                 {link.label}
               </Link>
@@ -56,6 +56,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
             className="lg:hidden glass-card border-t border-border/50 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
@@ -64,7 +65,7 @@ const Navbar = () => {
                   key={link.href}
                   to={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-muted-foreground hover:text-foreground text-sm font-body font-medium py-2"
+                  className="text-muted-foreground hover:text-foreground text-sm font-body font-medium py-2 transition-colors duration-200"
                 >
                   {link.label}
                 </Link>
