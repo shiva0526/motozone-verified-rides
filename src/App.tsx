@@ -11,6 +11,7 @@ import Sell from "./pages/Sell";
 import HowItWorksPage from "./pages/HowItWorksPage";
 import Certification from "./pages/Certification";
 import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/bikes" element={<Bikes />} />
           <Route path="/bikes/:slug" element={<BikeDetail />} />
           <Route path="/sell" element={<Sell />} />
