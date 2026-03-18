@@ -14,62 +14,62 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Montserrat', 'sans-serif'],
+        heading: ['Space Grotesk', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "rgba(255,255,255,0.08)",
+        input: "rgba(255,255,255,0.08)",
+        ring: "#3B82F6",
+        background: "#0A0A0A",
+        foreground: "#FFFFFF",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#3B82F6", // electric blue
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#111111", // soft dark layer
+          foreground: "#9CA3AF",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#111111",
+          foreground: "#9CA3AF",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#8B5CF6", // premium purple
+          foreground: "#FFFFFF",
         },
         success: {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "#0A0A0A",
+          foreground: "#FFFFFF",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "rgba(255,255,255,0.02)",
+          foreground: "#FFFFFF",
         },
         sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+          DEFAULT: "#0A0A0A",
+          foreground: "#FFFFFF",
+          primary: "#3B82F6",
+          "primary-foreground": "#FFFFFF",
+          accent: "#8B5CF6",
+          "accent-foreground": "#FFFFFF",
+          border: "rgba(255,255,255,0.08)",
+          ring: "#3B82F6",
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "16px",
+        md: "12px",
+        sm: "8px",
       },
       keyframes: {
         "accordion-down": {
@@ -85,15 +85,20 @@ export default {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "glow-pulse": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(227, 24, 55, 0.1)" },
-          "50%": { boxShadow: "0 0 50px rgba(227, 24, 55, 0.3)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(59, 130, 246, 0.1)" }, // Blue glow
+          "50%": { boxShadow: "0 0 50px rgba(59, 130, 246, 0.3)" },
         },
+        "glow-purple": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(139, 92, 246, 0.1)" },
+          "50%": { boxShadow: "0 0 50px rgba(139, 92, 246, 0.3)" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in-up": "fade-in-up 0.4s ease-out forwards",
+        "fade-in-up": "fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards", // smoother
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "glow-purple": "glow-purple 4s ease-in-out infinite",
       },
     },
   },
