@@ -31,18 +31,18 @@ export const bikes: Bike[] = [
   },
   {
     id: 2, slug: 'ktm-duke-390', brand: 'KTM', model: 'Duke 390', year: 2023, type: 'Street', price: 215000, condition: 'Excellent', city: 'Delhi', certified: true,
-    image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1650980671627-f21892b78749?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     mileage: '5,200 km', engine: '373cc Single', power: '43.5 bhp',
     description: 'Nearly new KTM Duke 390 with just 5,200 km on the odometer. Quickshifter+, ride-by-wire, LED headlamps. Still under manufacturer warranty.',
     gallery: [
-      'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1622185135505-2d795003994a?w=800&h=600&fit=crop',
+      'https://i.pinimg.com/1200x/a5/cf/f5/a5cff56d498fee860471710f5baa0023.jpg',
+      'https://i.pinimg.com/1200x/a5/cf/f5/a5cff56d498fee860471710f5baa0023.jpg',
+      'https://i.pinimg.com/1200x/a5/cf/f5/a5cff56d498fee860471710f5baa0023.jpg',
     ],
   },
   {
     id: 3, slug: 'honda-cb500x', brand: 'Honda', model: 'CB500X', year: 2021, type: 'Adventure', price: 320000, condition: 'Good', city: 'Bangalore', certified: true,
-    image: 'https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=600&h=450&fit=crop',
+    image: 'https://i.pinimg.com/1200x/9c/c0/85/9cc08592763cc0b51a48a56dee6c1198.jpg',
     mileage: '22,800 km', engine: '471cc Parallel Twin', power: '47.5 bhp',
     description: 'Honda CB500X adventure tourer perfect for both city commutes and weekend getaways. Comes with crash guard, engine guard, and touring windscreen.',
     gallery: [
@@ -53,7 +53,7 @@ export const bikes: Bike[] = [
   },
   {
     id: 4, slug: 'yamaha-mt15', brand: 'Yamaha', model: 'MT-15 V2', year: 2023, type: 'Street', price: 135000, condition: 'Excellent', city: 'Pune', certified: false,
-    image: 'https://images.unsplash.com/photo-1622185135505-2d795003994a?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1695013147209-1516a20f0cdd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     mileage: '3,100 km', engine: '155cc Single', power: '18.4 bhp',
     description: 'Yamaha MT-15 V2 in Metallic Black. Barely used, like-new condition. VVA engine with excellent fuel efficiency. Perfect first bike or daily commuter.',
     gallery: [
@@ -64,7 +64,7 @@ export const bikes: Bike[] = [
   },
   {
     id: 5, slug: 'bajaj-dominar-400', brand: 'Bajaj', model: 'Dominar 400', year: 2022, type: 'Sport Touring', price: 165000, condition: 'Good', city: 'Chennai', certified: true,
-    image: 'https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1644879796743-32f929189b81?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     mileage: '18,600 km', engine: '373cc Single', power: '39.4 bhp',
     description: 'Bajaj Dominar 400 with dual-channel ABS, USD forks, and full LED lighting. A great sport tourer with comfortable ergonomics for long rides.',
     gallery: [
@@ -86,7 +86,7 @@ export const bikes: Bike[] = [
   },
   {
     id: 7, slug: 'kawasaki-ninja-300', brand: 'Kawasaki', model: 'Ninja 300', year: 2022, type: 'Sport', price: 245000, condition: 'Good', city: 'Mumbai', certified: true,
-    image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1747865917593-4968fda84a14?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     mileage: '14,200 km', engine: '296cc Parallel Twin', power: '39 bhp',
     description: 'Kawasaki Ninja 300 in KRT edition livery. Excellent entry-level sportbike with smooth twin-cylinder engine. Well maintained with recent tyre change.',
     gallery: [
@@ -97,7 +97,7 @@ export const bikes: Bike[] = [
   },
   {
     id: 8, slug: 'hero-xpulse-200', brand: 'Hero', model: 'XPulse 200 4V', year: 2023, type: 'Adventure', price: 125000, condition: 'Excellent', city: 'Delhi', certified: false,
-    image: 'https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=600&h=450&fit=crop',
+    image: 'https://i.pinimg.com/736x/39/3b/44/393b440258bfaf78c6cd45cce904185a.jpg',
     mileage: '7,500 km', engine: '199cc Single', power: '19.1 bhp',
     description: 'Hero XPulse 200 4V — the affordable adventure machine. Long travel suspension, 21-inch front wheel, digital console with turn-by-turn navigation.',
     gallery: [
